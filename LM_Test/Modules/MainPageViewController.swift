@@ -20,7 +20,7 @@ class MainPageViewController: UITableViewController {
         categories = Category.getCategories()
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
-
+        tableView.showsVerticalScrollIndicator = false
     }
     
   
@@ -33,29 +33,35 @@ class MainPageViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return productsBlock.count + 1
     }
     
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if indexPath.row == 0 {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoriesCell", for: indexPath) as? CategoriesTableViewCell else { return UITableViewCell() }
     
     cell.configure(categories: categories)
    
   return cell
+    } else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as? ProductsTableViewCell else { return UITableViewCell() }
+        cell.configure(productBlock: productsBlock[indexPath.row - 1])
+        
+        return cell
+    }
     
    }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        200
+        if indexPath.row == 0 {
+            return 180
+        } else {
+            return 300
+        }
+        
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.section == 0 {
-//            return view.frame.height / 5
-//        } else {
-//            return 250
-//        }
-//    }
+
      
 }
 

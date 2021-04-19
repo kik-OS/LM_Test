@@ -19,6 +19,7 @@
 		E47C1AB8262D65F400DA5BC3 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47C1AB7262D65F400DA5BC3 /* CategoriesTableViewCell.swift */; };
 		E47C1ABB262D660600DA5BC3 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47C1ABA262D660600DA5BC3 /* ProductsTableViewCell.swift */; };
 		E47C1ABF262D663F00DA5BC3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47C1ABE262D663F00DA5BC3 /* CollectionViewCell.swift */; };
+		E47C1AC2262D834000DA5BC3 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47C1AC1262D834000DA5BC3 /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E47C1AB7262D65F400DA5BC3 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		E47C1ABA262D660600DA5BC3 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		E47C1ABE262D663F00DA5BC3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E47C1AC1262D834000DA5BC3 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				E47C1AB7262D65F400DA5BC3 /* CategoriesTableViewCell.swift */,
 				E47C1ABA262D660600DA5BC3 /* ProductsTableViewCell.swift */,
 				E47C1ABE262D663F00DA5BC3 /* CollectionViewCell.swift */,
+				E47C1AC1262D834000DA5BC3 /* ProductCollectionViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				E47C1A8F262C3B9D00DA5BC3 /* MainPageViewController.swift in Sources */,
 				E47C1AB8262D65F400DA5BC3 /* CategoriesTableViewCell.swift in Sources */,
+				E47C1AC2262D834000DA5BC3 /* ProductCollectionViewCell.swift in Sources */,
 				E47C1ABF262D663F00DA5BC3 /* CollectionViewCell.swift in Sources */,
 				E47C1A97262C547D00DA5BC3 /* DataManager.swift in Sources */,
 				E47C1ABB262D660600DA5BC3 /* ProductsTableViewCell.swift in Sources */,
