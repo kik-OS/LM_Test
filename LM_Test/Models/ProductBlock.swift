@@ -2,7 +2,7 @@
 //  ProductBlock.swift
 //  LM_Test
 //
-//  Created by Никита Гвоздиков on 18.04.2021.
+//  Created by Никита Гвоздиков on 19.04.2021.
 //
 
 import Foundation
@@ -17,7 +17,6 @@ struct Product {
     let price: Int
     let image: String
 }
-
 
 
 extension ProductBlock {

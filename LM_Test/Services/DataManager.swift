@@ -25,8 +25,7 @@ class DataManager {
                                   Category(title: "Освещение", image: "23"),
                                   Category(title: "Инструменты", image: "22"),
                                   Category(title: "Декор", image: "20"),
-                                  Category(title: "Стройматериалы", image: "21")
-                                  ]
+                                  Category(title: "Стройматериалы", image: "21")]
     
     let blockTitle = ["Недавно просмотренные", "Предложение ограничено", "Лучшая цена"]
     
