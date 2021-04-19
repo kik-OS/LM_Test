@@ -1,15 +1,14 @@
 //
-//  FooterTableViewCell.swift
+//  ProductsTableViewCell.swift
 //  LM_Test
 //
-//  Created by Никита Гвоздиков on 18.04.2021.
+//  Created by Никита Гвоздиков on 19.04.2021.
 //
 
 import UIKit
 
-class FooterTableViewCell: UITableViewCell {
-    @IBOutlet weak var footerLabel: UILabel!
-    
+class ProductsTableViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

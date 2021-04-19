@@ -26,9 +26,11 @@ extension ProductBlock {
         let products = DataManager.shared.products
         let blockTitles = DataManager.shared.blockTitle
         var productBlocks: [ProductBlock] = []
-        blockTitles.forEach { productBlocks.append(ProductBlock(products: products.shuffled(), titleOfBlock: $0))}
-        return productBlocks
         
+        for blockTitle in blockTitles {
+            productBlocks.append(ProductBlock(products: products.shuffled(), titleOfBlock: blockTitle))
+        }
+        return productBlocks
     }
 }
    

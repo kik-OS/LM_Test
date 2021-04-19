@@ -20,6 +20,7 @@ class MainPageViewController: UITableViewController {
         categories = Category.getCategories()
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
+
     }
     
   
@@ -28,41 +29,33 @@ class MainPageViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return productsBlock.count + 1
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "title") as! FooterTableViewCell
-//        cell.footerLabel.text = productsBlock[section + 1].titleOfBlock
-        return cell
-    }
+   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoriesCell", for: indexPath) as? CategoriesTableViewCell else { return UITableViewCell() }
     
+    cell.configure(categories: categories)
+   
+  return cell
     
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "products", for: indexPath) as! TableViewCell
-     
-        if indexPath.section == 0 {
-            cell.categories = self.categories
-            cell.configure(isBig: false)
-        } else {
-            cell.products = productsBlock[indexPath.row].products
-            cell.configure(isBig: true)
-        }
-     
-     return cell
-     }
+   }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return view.frame.height / 5
-        } else {
-            return 250
-        }
+        200
     }
+    
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.section == 0 {
+//            return view.frame.height / 5
+//        } else {
+//            return 250
+//        }
+//    }
      
 }
 
@@ -73,7 +66,7 @@ extension MainPageViewController {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.backgroundColor = #colorLiteral(red: 0.3225129247, green: 0.7715495229, blue: 0.2422060668, alpha: 1)
+        navBarAppearance.backgroundColor = #colorLiteral(red: 0.3695557117, green: 0.7910687923, blue: 0.3164694309, alpha: 1)
         //передаем новые параметры в навигейшн бар
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance

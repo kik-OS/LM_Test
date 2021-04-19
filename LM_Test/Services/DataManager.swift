@@ -20,11 +20,13 @@ class DataManager {
                                Product(title: "Штукатурка гипсовая Unis Теплон 30 кг", price: 318, image: "7"),
                                Product(title: "Грунтовка глубокого проникновения Knauf Тифенгрунд 10 л", price: 716, image: "8")]
     
-    let categories: [Category] = [Category(title: "Сад", image: "1"),
-                                  Category(title: "Освещение", image: "2"),
-                                  Category(title: "Инструменты", image: "3"),
-                                  Category(title: "Декор", image: "4"),
-                                  Category(title: "Электротовары", image: "5")]
+    let categories: [Category] = [Category(title: "Каталог", image: "25"),
+                                  Category(title: "Сад", image: "24"),
+                                  Category(title: "Освещение", image: "23"),
+                                  Category(title: "Инструменты", image: "22"),
+                                  Category(title: "Декор", image: "20"),
+                                  Category(title: "Стройматериалы", image: "21")
+                                  ]
     
     let blockTitle = ["Недавно просмотренные", "Предложение ограничено", "Лучшая цена"]
     
